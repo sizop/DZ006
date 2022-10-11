@@ -18,15 +18,14 @@ from random import randint
 
 
 def new_list(num=20):
-    new_list = [randint(2, 100) for _ in range(num)]
-    print(*f'Входящий список:\n{new_list}', sep='')
-    return new_list
+    n_l = [randint(1, 100) for _ in range(num)]
+    print(*f'Входящий список:\n{n_l}', sep='')
+    return n_l
 
 
-def out_list(in_list=new_list()):
-    out_list = list(map(lambda x: x // 1, in_list))
-    out_list = [in_list[i] for i in range(1, len(in_list)) if int(in_list[i - 1]) < int(in_list[i])]
-    return out_list
+def out_list(in_l=new_list()):
+    o_l = [in_l[i] for i in range(1, len(in_l)) if int(in_l[i - 1]) < int(in_l[i])]
+    return o_l
 
 
 print(*f'Исходящий список:\n{out_list()}', sep='')
