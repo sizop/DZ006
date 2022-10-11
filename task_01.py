@@ -18,7 +18,7 @@ from random import randint
 
 
 def new_list(num=20):
-    new_list = [randint(2, 100) for i in range(num)]
+    new_list = [randint(2, 100) for _ in range(num)]
     print(*f'Входящий список:\n{new_list}', sep='')
     return new_list
 
